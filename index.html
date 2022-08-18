@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="tic-tac-toe.js" defer></script>
+    <title>Tic tac toe</title>
+</head>
+
+<body>
+    <h1>Tic Tac Toe</h1>
+    <p>A very simple game, where two players alternate placing "X" or "O". The goal is to get
+        three of your own tokens in a row. The first person to do this wins, or if neither does
+        and the board fills up the game goes to a draw. Good luck!
+    </p>
+        <div>
+            <label for="player1-name">Player 1's name (X)</label>
+            <input type="text" name="player1_name" id="player1-name" placeholder="20 character limit" maxlength="20">
+        </div>
+        <div>
+            <label for="player2-name">Player 2's name (O)</label>
+            <input type="text" name="player2_name" id="player2-name" placeholder="20 character limit" maxlength="20">
+        </div>
+        <button id="ttt-gameboard-start-btn" onclick="Game.start();">Start</button>
+        <button id="ttt-gameboard-reset-btn" disabled>Reset Game</button>
+    <!-- Tic-tac-toe area -->
+    <div style="display: grid; grid-template-columns: 420px 1fr;">
+        <div id="ttt-gameboard" style="grid-row: span 2;">
+            <div class="ttt-gameboard-space"></div>
+            <div class="ttt-gameboard-space"></div>
+            <div class="ttt-gameboard-space"></div>
+            <div class="ttt-gameboard-space"></div>
+            <div class="ttt-gameboard-space"></div>
+            <div class="ttt-gameboard-space"></div>
+            <div class="ttt-gameboard-space"></div>
+            <div class="ttt-gameboard-space"></div>
+            <div class="ttt-gameboard-space"></div>
+        </div>
+        <div id="ttt-notification" width="100"></div>
+        <div id="ttt-error" width="100" style="color: red;"></div>
+    </div>
+</body>
+
+</html>
